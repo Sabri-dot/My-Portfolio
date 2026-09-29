@@ -1,74 +1,115 @@
 import { FiArrowUpRight, FiCode } from 'react-icons/fi';
 
+
 const projects = [
   {
-    number: '01',
-    title: 'Project One',
-    description: 'Your project description will go here.',
-    technologies: ['React', 'JavaScript'],
-    type: 'PROJECT 01',
+    number: "01",
+    name: "TaskFlow",
+    category: "Final Year Project · Full-Stack Application",
+    description:
+      "A full-stack project management application designed to help teams organize projects, manage tasks, coordinate team members and track progress. Includes JWT authentication, role-based access control, an administrative panel, REST APIs and real-time notifications.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "JWT",
+      "Socket.IO",
+      "Bootstrap",
+    ],
+    highlight: "Awarded the highest grade: 10/10",
+    className: "taskflow-project",
   },
   {
-    number: '02',
-    title: 'Project Two',
-    description: 'Your project description will go here.',
-    technologies: ['Frontend', 'Backend'],
-    type: 'PROJECT 02',
+    number: "02",
+    name: "Online Book Store",
+    category: "Full-Stack Application · E-commerce",
+    description:
+      "A full-stack online bookstore where users can browse and purchase books. The application includes user authentication, shopping cart functionality, order management, simulated payments and an administrative panel for managing books, users and orders.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "MongoDB",
+      "Git",
+      "GitHub",
+    ],
+    className: "bookstore-project",
   },
   {
-    number: '03',
-    title: 'Project Three',
-    description: 'Your project description will go here.',
-    technologies: ['Database', 'Web'],
-    type: 'PROJECT 03',
+    number: "03",
+    name: "Makeup Artist Website",
+    category: "Frontend Development · Responsive Website",
+    description:
+      "A responsive website created for a professional makeup artist, featuring organized sections for services and client-facing information. Designed to provide a clear browsing experience across desktop and mobile devices.",
+    technologies: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Git",
+    ],
+    className: "makeup-project",
   },
 ];
 
 function Projects() {
   return (
-    <section id="projects" className="section-padding">
-      <div className="container">
-        <div className="section-heading">
-          <span className="section-kicker">SELECTED WORK</span>
-          <h2>Projects I've <span className="gradient-text">built.</span></h2>
-          <p>A selection of my work in web development.</p>
+    <section className="projects-section section-padding" id="projects">
+      <div className="projects-container">
+        <div className="section-header projects-heading">
+          <span className="section-label">MY WORK</span>
+
+          <h2 className="section-title">
+            Projects I've <span className="gradient-text">Built</span>
+          </h2>
+
+          <p className="section-description">
+            A selection of projects that reflect my experience in
+            full-stack development, database management and responsive
+            web design.
+          </p>
         </div>
 
-        <div className="row g-4">
+        <div className="projects-grid">
           {projects.map((project) => (
-            <div className="col-md-6 col-lg-4" key={project.number}>
-              <article className="project-card h-100">
-                <div className={`project-preview preview-${project.number}`}>
-                  <div className="preview-top">
-                    <span>{project.type}</span>
-                    <FiCode />
-                  </div>
-                  <div className="preview-art">
-                    <span className="preview-orb" />
-                    <span className="preview-number">{project.number}</span>
-                    <span className="preview-line" />
-                  </div>
-                  <span className="preview-caption">CASE STUDY / 2026</span>
-                </div>
+            <article
+              className={`project-card ${project.className}`}
+              key={project.number}
+            >
+              <div className="project-card-top">
+                <span className="project-number">{project.number}</span>
+                <span className="project-category">{project.category}</span>
+              </div>
 
-                <div className="project-info">
-                  <span className="project-index">PROJECT {project.number}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+              <div className="project-card-content">
+                <h3>{project.name}</h3>
 
-                  <div className="skill-tags">
-                    {project.technologies.map((technology) => (
-                      <span key={technology}>{technology}</span>
-                    ))}
-                  </div>
+                <p className="project-description">
+                  {project.description}
+                </p>
 
-                  <div className="project-link">
-                    <span>Details coming soon</span>
-                    <FiArrowUpRight />
+                {project.highlight && (
+                  <div className="project-highlight">
+                    <span aria-hidden="true">★</span>
+                    {project.highlight}
                   </div>
-                </div>
-              </article>
-            </div>
+                )}
+              </div>
+
+              <div className="project-technologies">
+                {project.technologies.map((technology) => (
+                  <span className="project-tech-tag" key={technology}>
+                    {technology}
+                  </span>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
       </div>
