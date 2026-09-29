@@ -1,62 +1,58 @@
 import {
-  FiCode,
-  FiDatabase,
+  FiMonitor,
   FiServer,
+  FiDatabase,
   FiTool,
-} from 'react-icons/fi'
+} from 'react-icons/fi';
 
 const skillGroups = [
   {
-    title: 'Frontend',
-    icon: <FiCode />,
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap', 'Vite'],
+    icon: <FiMonitor />,
+    title: 'Frontend Development',
+    description: 'Creating responsive and interactive user interfaces.',
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap'],
   },
   {
-    title: 'Backend',
     icon: <FiServer />,
-    skills: ['Node.js', 'Express.js', 'REST API', 'JWT', 'Socket.IO'],
+    title: 'Backend Development',
+    description: 'Building application logic and server-side functionality.',
+    skills: ['REST APIs', 'Server-side Logic', 'Authentication'],
   },
   {
-    title: 'Database',
     icon: <FiDatabase />,
-    skills: ['MySQL', 'SQL', 'Relational Databases', 'ER Diagrams'],
+    title: 'Databases',
+    description: 'Working with relational and NoSQL data storage.',
+    skills: ['MySQL', 'Microsoft SQL Server', 'MongoDB'],
   },
   {
-    title: 'Tools',
     icon: <FiTool />,
-    skills: ['Git', 'GitHub', 'VS Code', 'Postman'],
+    title: 'Tools & Workflow',
+    description: 'Managing code, collaboration and development workflow.',
+    skills: ['Git', 'GitHub', 'VS Code', 'npm', 'Vite'],
   },
-]
+];
 
 function Skills() {
   return (
-    <section id="skills" className="section skills-section">
+    <section id="skills" className="section-padding skills-section">
       <div className="container">
-        <div className="section-label">Skills</div>
-
-        <h2 className="section-title">
-          Technologies I work with.
-        </h2>
-
-        <p className="section-description mb-5">
-          A practical toolkit covering frontend development, backend
-          engineering, databases and the tools used throughout the development
-          process.
-        </p>
+        <div className="section-heading">
+          <span className="section-kicker">MY TOOLKIT</span>
+          <h2>Skills & <span className="gradient-text">technologies.</span></h2>
+          <p>The technologies I use to bring web applications to life.</p>
+        </div>
 
         <div className="row g-4">
-          {skillGroups.map((group) => (
+          {skillGroups.map((group, index) => (
             <div className="col-md-6 col-lg-3" key={group.title}>
-              <div className="skill-card">
+              <div className="skill-card h-100">
                 <div className="skill-icon">{group.icon}</div>
-
+                <span className="skill-number">0{index + 1}</span>
                 <h3>{group.title}</h3>
-
+                <p>{group.description}</p>
                 <div className="skill-tags">
                   {group.skills.map((skill) => (
-                    <span className="skill-tag" key={skill}>
-                      {skill}
-                    </span>
+                    <span key={skill}>{skill}</span>
                   ))}
                 </div>
               </div>
@@ -65,7 +61,7 @@ function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

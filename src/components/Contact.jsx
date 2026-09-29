@@ -1,56 +1,58 @@
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import {
+  FiArrowUpRight,
+  FiMail,
+  FiGithub,
+  FiLinkedin,
+} from 'react-icons/fi';
 
 function Contact() {
   return (
-    <section id="contact" className="section contact-section">
+    <section id="contact" className="section-padding contact-section">
       <div className="container">
-        <div className="contact-box">
-          <div className="section-label">Contact</div>
+        <div className="contact-card">
+          <span className="section-kicker">HAVE A PROJECT IN MIND?</span>
 
           <h2>
             Let's build something
-            <span className="text-blue"> meaningful.</span>
+            <br />
+            <span className="gradient-text">meaningful.</span>
           </h2>
 
           <p>
-            I am open to opportunities where I can contribute my skills in web
-            development, backend systems and databases while continuing to grow
-            as a software professional.
+            I'm open to discussing web development opportunities,
+            collaborations and interesting projects.
           </p>
 
-          <div className="contact-links">
-            <a
-              href="mailto:your.email@example.com"
-              className="contact-link"
-            >
-              <FiMail />
-              Email
-            </a>
+          {/* Replace with your real email before publishing. */}
+          <a
+            href="mailto:YOUR_EMAIL@example.com"
+            className="btn-primary-custom"
+          >
+            <FiMail /> Get in touch <FiArrowUpRight />
+          </a>
 
-            <a
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="contact-link"
-            >
-              <FiLinkedin />
-              LinkedIn
-            </a>
-
+          <div className="contact-socials">
             <a
               href="https://github.com/"
               target="_blank"
               rel="noreferrer"
-              className="contact-link"
+              aria-label="GitHub"
             >
               <FiGithub />
-              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin />
             </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

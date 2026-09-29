@@ -1,119 +1,70 @@
-import {
-  FiArrowUpRight,
-  FiBookOpen,
-  FiCode,
-  FiMonitor,
-} from 'react-icons/fi'
+import { FiArrowUpRight, FiCode } from 'react-icons/fi';
 
 const projects = [
   {
     number: '01',
-    featured: true,
-    title: 'TaskFlow',
-    description:
-      'A full-stack project management system developed as a graduation thesis project. The application provides project, task and team management through a centralized web platform.',
-    technologies: [
-      'React',
-      'Vite',
-      'Node.js',
-      'Express.js',
-      'MySQL',
-      'JWT',
-      'Socket.IO',
-    ],
-    icon: <FiCode />,
+    title: 'Project One',
+    description: 'Your project description will go here.',
+    technologies: ['React', 'JavaScript'],
+    type: 'PROJECT 01',
   },
   {
     number: '02',
-    featured: false,
-    title: 'Online Bookstore',
-    description:
-      'A web application for browsing and managing books through an online bookstore interface, with a focus on structured data, usability and responsive web design.',
-    technologies: [
-      'React',
-      'JavaScript',
-      'Bootstrap',
-      'Node.js',
-      'MySQL',
-    ],
-    icon: <FiBookOpen />,
+    title: 'Project Two',
+    description: 'Your project description will go here.',
+    technologies: ['Frontend', 'Backend'],
+    type: 'PROJECT 02',
   },
   {
     number: '03',
-    featured: false,
-    title: 'Makeup Artist Portfolio Website',
-    description:
-      'A professional website created for a makeup artist to showcase services, portfolio content and business information through a modern and responsive web interface.',
-    technologies: [
-      'React',
-      'JavaScript',
-      'CSS',
-      'Responsive Design',
-      'Netlify',
-    ],
-    icon: <FiMonitor />,
+    title: 'Project Three',
+    description: 'Your project description will go here.',
+    technologies: ['Database', 'Web'],
+    type: 'PROJECT 03',
   },
-]
+];
 
 function Projects() {
   return (
-    <section id="projects" className="section projects-section">
+    <section id="projects" className="section-padding">
       <div className="container">
-        <div className="section-label">Featured Projects</div>
-
-        <h2 className="section-title">
-          Projects that showcase my work.
-        </h2>
-
-        <p className="section-description mb-5">
-          A selection of academic and personal projects demonstrating my
-          experience with modern web technologies, backend development and
-          databases.
-        </p>
+        <div className="section-heading">
+          <span className="section-kicker">SELECTED WORK</span>
+          <h2>Projects I've <span className="gradient-text">built.</span></h2>
+          <p>A selection of my work in web development.</p>
+        </div>
 
         <div className="row g-4">
           {projects.map((project) => (
-            <div className="col-lg-4" key={project.number}>
-              <article className="project-card">
-                <div className="project-image">
-                  <div className="project-image-placeholder">
-                    {project.icon}
+            <div className="col-md-6 col-lg-4" key={project.number}>
+              <article className="project-card h-100">
+                <div className={`project-preview preview-${project.number}`}>
+                  <div className="preview-top">
+                    <span>{project.type}</span>
+                    <FiCode />
                   </div>
+                  <div className="preview-art">
+                    <span className="preview-orb" />
+                    <span className="preview-number">{project.number}</span>
+                    <span className="preview-line" />
+                  </div>
+                  <span className="preview-caption">CASE STUDY / 2026</span>
                 </div>
 
-                <div className="project-content">
-                  <div className="project-number">
-                    {project.number} /{' '}
-                    {project.featured ? 'FEATURED' : 'PROJECT'}
-                  </div>
+                <div className="project-info">
+                  <span className="project-index">PROJECT {project.number}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
 
-                  <h3 className="project-title">
-                    {project.title}
-                  </h3>
-
-                  <p className="project-description">
-                    {project.description}
-                  </p>
-
-                  <div className="project-tags">
+                  <div className="skill-tags">
                     {project.technologies.map((technology) => (
-                      <span
-                        className="project-tag"
-                        key={technology}
-                      >
-                        {technology}
-                      </span>
+                      <span key={technology}>{technology}</span>
                     ))}
                   </div>
 
-                  <div className="project-links">
-                    <a
-                      href="#contact"
-                      className="project-link"
-                    >
-                      View Project
-                      <FiArrowUpRight />
-                    </a>
+                  <div className="project-link">
+                    <span>Details coming soon</span>
+                    <FiArrowUpRight />
                   </div>
                 </div>
               </article>
@@ -122,7 +73,7 @@ function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

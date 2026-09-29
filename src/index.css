@@ -1,16 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #f5f7ff;
   background: #080b14;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   font-optical-sizing: auto;
   font-weight: 400;
-
   scroll-behavior: smooth;
 }
 
@@ -20,7 +20,8 @@
 
 html {
   min-width: 320px;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 85px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -40,6 +41,6 @@ a {
 }
 
 ::selection {
-  color: #ffffff;
+  color: white;
   background: #635bff;
 }

@@ -1,62 +1,55 @@
-import { FiCode, FiDatabase } from 'react-icons/fi'
+import { FiBookOpen, FiCode, FiTarget } from 'react-icons/fi';
 
 function About() {
   return (
-    <section id="about" className="section about-section">
+    <section id="about" className="section-padding">
       <div className="container">
-        <div className="section-label">About Me</div>
+        <div className="section-heading">
+          <span className="section-kicker">GET TO KNOW ME</span>
+          <h2>More than just <span className="gradient-text">code.</span></h2>
+          <p>A little about my background and what drives me.</p>
+        </div>
 
-        <h2 className="section-title">
-          Building web applications with a
-          <span className="text-blue"> full-stack mindset.</span>
-        </h2>
-
-        <div className="row g-4 mt-2">
+        <div className="row g-4 align-items-stretch">
           <div className="col-lg-7">
-            <div className="about-card">
+            <div className="about-card h-100">
+              <span className="card-label">01 / ABOUT ME</span>
+              <h3>Turning ideas into useful digital products.</h3>
               <p>
-                I am a Computer Science & Engineering graduate specialized in
-                Web Programming. My academic work and projects have given me
-                practical experience in designing and developing modern web
-                applications, from user interfaces to backend systems and
-                databases.
+                I hold a Bachelor's degree in Computer Science and
+                Engineering, specializing in Web Programming. I enjoy
+                developing complete web solutions — from responsive
+                user interfaces to backend logic and database design.
               </p>
-
-              <p className="mt-3">
-                I enjoy working across the different layers of a web
-                application and understanding how frontend, backend and data
-                work together to create reliable and useful software.
+              <p>
+                I value clean code, thoughtful design, continuous
+                learning and building applications that solve
+                real-world problems.
               </p>
+              <div className="about-highlight">
+                <FiTarget />
+                <span>Focused on quality, usability and continuous growth.</span>
+              </div>
             </div>
           </div>
 
           <div className="col-lg-5">
-            <div className="about-card">
-              <div className="about-highlight">
-                <div className="about-highlight-icon">
-                  <FiCode />
-                </div>
-
+            <div className="about-side-card">
+              <div className="about-feature">
+                <div className="feature-icon"><FiBookOpen /></div>
                 <div>
-                  <h4>Web Development</h4>
-                  <p>
-                    Building responsive interfaces and full-stack web
-                    applications.
-                  </p>
+                  <h4>Education</h4>
+                  <p>Bachelor's in Computer Science and Engineering</p>
+                  <span>Specialization: Web Programming</span>
                 </div>
               </div>
 
-              <div className="about-highlight">
-                <div className="about-highlight-icon">
-                  <FiDatabase />
-                </div>
-
+              <div className="about-feature">
+                <div className="feature-icon"><FiCode /></div>
                 <div>
-                  <h4>Backend & Databases</h4>
-                  <p>
-                    Developing APIs and working with relational database
-                    systems.
-                  </p>
+                  <h4>Development</h4>
+                  <p>Frontend & Backend</p>
+                  <span>Building end-to-end web applications</span>
                 </div>
               </div>
             </div>
@@ -64,7 +57,7 @@ function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;
