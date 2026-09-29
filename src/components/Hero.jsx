@@ -7,110 +7,81 @@ import {
   FiLayers,
 } from 'react-icons/fi';
 
+
 function Hero() {
   return (
-    <section id="home" className="hero-section">
+    <section className="hero-section" id="home">
       <div className="hero-glow" />
 
-      <div className="container hero-container">
-        <div className="row align-items-center g-5">
-          <div className="col-lg-7">
-            <div className="availability">
-              <span className="status-dot" />
-              COMPUTER SCIENCE & ENGINEERING GRADUATE
-            </div>
-
-            <h1 className="hero-title">
-              Building digital
-              <br />
-              experiences that
-              <br />
-              <span className="gradient-text">make an impact.</span>
-            </h1>
-
-            <p className="hero-description">
-              Hi, I'm Sabri — a Full-Stack Web Developer passionate
-              about building modern web applications, intuitive
-              interfaces and reliable backend systems.
-            </p>
-
-            <div className="hero-actions">
-              <a href="#projects" className="btn-primary-custom">
-                Explore my work <FiArrowUpRight />
-              </a>
-              <a href="#contact" className="btn-secondary-custom">
-                Get in touch
-              </a>
-            </div>
-
-            <div className="hero-socials">
-              <a href="https://github.com/" target="_blank"
-                rel="noreferrer" aria-label="GitHub">
-                <FiGithub />
-              </a>
-              <a href="https://linkedin.com/" target="_blank"
-                rel="noreferrer" aria-label="LinkedIn">
-                <FiLinkedin />
-              </a>
-              <span className="social-divider" />
-              <span>Based in Kosovo</span>
-            </div>
+      <div className="hero-container">
+        <div className="hero-content">
+          <div className="availability">
+            <span className="status-dot" />
+            Computer Science and Engineering 
           </div>
 
-          <div className="col-lg-5">
-            <div className="hero-visual">
-              <div className="visual-orbit orbit-one" />
-              <div className="visual-orbit orbit-two" />
+          <h1 className="hero-title">
+            Hi, I'm Sabri Jonuzi.
+            <br />
+            I build <span className="gradient-text">web experiences.</span>
+          </h1>
 
-              <div className="developer-card">
-                <div className="card-topbar">
-                  <div className="window-dots">
-                    <span /><span /><span />
-                  </div>
-                  <span>developer.js</span>
-                </div>
+          <p className="hero-description">
+            A Web Programming graduate with hands-on experience in
+            full-stack web development, REST APIs, authentication and
+            database design. I enjoy turning ideas into responsive,
+            practical and user-friendly web applications.
+          </p>
 
-                <div className="code-content">
-                  <p><span className="code-purple">const</span> developer = {'{'}</p>
-                  <p className="code-indent">
-                    name: <span className="code-green">'Sabri'</span>,
-                  </p>
-                  <p className="code-indent">
-                    role: <span className="code-green">'Full-Stack'</span>,
-                  </p>
-                  <p className="code-indent">
-                    frontend: <span className="code-blue">true</span>,
-                  </p>
-                  <p className="code-indent">
-                    backend: <span className="code-blue">true</span>,
-                  </p>
-                  <p className="code-indent">
-                    databases: <span className="code-blue">true</span>,
-                  </p>
-                  <p className="code-indent">
-                    coffee: <span className="code-orange">∞</span>
-                  </p>
-                  <p>{'};'}</p>
-                  <p className="code-comment">// Turning ideas into code.</p>
-                </div>
-              </div>
+          <div className="hero-actions">
+            <a href="#projects" className="btn-primary-custom">
+              Explore My Projects <span>↗</span>
+            </a>
 
-              <div className="floating-badge badge-top">
-                <FiCode /> <span>Frontend</span>
-              </div>
-              <div className="floating-badge badge-bottom">
-                <FiDatabase /> <span>Backend & Data</span>
-              </div>
-              <div className="floating-badge badge-side">
-                <FiLayers /> <span>Full-Stack</span>
-              </div>
-            </div>
+           
+<a
+  href="/cv/sabri-cv.pdf"
+  className="btn-secondary-custom"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View My CV <span>↗</span>
+</a>
+          </div>
+
+          <div className="hero-socials">
+            <a
+              href="#contact"
+              aria-label="Contact Sabri"
+            >
+              Get in touch
+            </a>
           </div>
         </div>
 
-        <a href="#about" className="scroll-indicator">
-          <span className="scroll-line" /> Scroll to explore
-        </a>
+        <div className="hero-visual">
+          <div className="hero-profile-card">
+            <div className="profile-image-wrapper">
+              <img
+                src="/images/profile.jpeg"
+                alt="Sabri Jonuzi"
+                className="hero-profile-image"
+              />
+            </div>
+
+            <div className="profile-details">
+              <span className="profile-label">WEB DEVELOPMENT</span>
+              <h2>Sabri Jonuzi</h2>
+              <p>Full-Stack Web Developer</p>
+            </div>
+
+            <div className="profile-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
