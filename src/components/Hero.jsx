@@ -27,10 +27,10 @@ function Hero() {
           </h1>
 
           <p className="hero-description">
-            A Web Programming graduate with hands-on experience in
-            full-stack web development, REST APIs, authentication and
-            database design. I enjoy turning ideas into responsive,
-            practical and user-friendly web applications.
+            A Web Programming graduate with hands-on experience in full-stack
+  web development, REST APIs, authentication, and database-driven
+  applications. I enjoy turning ideas into responsive, practical,
+  and user-friendly web applications.
           </p>
 
           <div className="hero-actions">

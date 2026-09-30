@@ -17,7 +17,6 @@ const skillGroups = [
       "JavaScript",
       "React",
       "Bootstrap",
-      "Tailwind CSS",
     ],
   },
   {
@@ -38,11 +37,13 @@ const skillGroups = [
     title: "Databases",
     description: "Working with relational and NoSQL databases.",
     skills: [
-      "MySQL",
-      "Microsoft SQL Server",
-      "MongoDB",
-      "Database Design",
-    ],
+    "SQL",
+    "MySQL",
+    "Microsoft SQL Server",
+    "MongoDB",
+    "Database Design",
+    "CRUD Operations",
+  ],
   },
   {
     icon: <FaTools />,

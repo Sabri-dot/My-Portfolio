@@ -42,11 +42,14 @@ function About() {
             </p>
 
             <p>
-              My technical experience includes frontend development with
+              My technical experience includes frontend development with 
               React and JavaScript, backend development with Node.js and
-              Express.js, and database management with MySQL and MongoDB.
-              I also work with REST APIs, authentication and role-based
-              access control.
+               Express.js, and practical experience with Java through
+                university coursework and programming exercises.
+                 I also work with databases such as MySQL, Microsoft SQL Server,
+                  and MongoDB, as well as REST APIs, authentication,
+                   and role-based access control.
+
             </p>
 
             <p>

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Keep all images and CV local
+/public/images/
+/public/cv/
