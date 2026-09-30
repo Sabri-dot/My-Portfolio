@@ -1,58 +1,74 @@
-import { FiBookOpen, FiCode, FiTarget } from 'react-icons/fi';
+
+import { FaGraduationCap, FaCode, FaLaptopCode } from "react-icons/fa";
 
 function About() {
+  const highlights = [
+    {
+      icon: <FaGraduationCap />,
+      title: "Education",
+      description: "BSc in Computer Science and Engineering — UBT",
+    },
+    {
+      icon: <FaCode />,
+      title: "Specialization",
+      description: "Web Programming and Full-Stack Development",
+    },
+    {
+      icon: <FaLaptopCode />,
+      title: "Development",
+      description: "Building responsive and practical web applications",
+    },
+  ];
+
   return (
-    <section id="about" className="section-padding">
-      <div className="container">
-        <div className="section-heading">
-          <span className="section-kicker">GET TO KNOW ME</span>
-          <h2>More than just <span className="gradient-text">code.</span></h2>
-          <p>A little about my background and what drives me.</p>
+    <section className="about-section section-padding" id="about">
+      <div className="about-container">
+        <div className="about-heading">
+          <span className="section-label">ABOUT ME</span>
+
+          <h2 className="section-title">
+            Turning Ideas Into{" "}
+            <span className="gradient-text">Web Experiences</span>
+          </h2>
         </div>
 
-        <div className="row g-4 align-items-stretch">
-          <div className="col-lg-7">
-            <div className="about-card h-100">
-              <span className="card-label">01 / ABOUT ME</span>
-              <h3>Turning ideas into useful digital products.</h3>
-              <p>
-                I hold a Bachelor's degree in Computer Science and
-                Engineering, specializing in Web Programming. I enjoy
-                developing complete web solutions — from responsive
-                user interfaces to backend logic and database design.
-              </p>
-              <p>
-                I value clean code, thoughtful design, continuous
-                learning and building applications that solve
-                real-world problems.
-              </p>
-              <div className="about-highlight">
-                <FiTarget />
-                <span>Focused on quality, usability and continuous growth.</span>
-              </div>
-            </div>
+        <div className="about-content">
+          <div className="about-text">
+            <p>
+              I'm Sabri Jonuzi, a Computer Science and Engineering graduate
+              from UBT, Pristina, specializing in Web Programming.
+              I'm passionate about creating modern, responsive and
+              user-friendly web applications.
+            </p>
+
+            <p>
+              My technical experience includes frontend development with
+              React and JavaScript, backend development with Node.js and
+              Express.js, and database management with MySQL and MongoDB.
+              I also work with REST APIs, authentication and role-based
+              access control.
+            </p>
+
+            <p>
+              My final-year project, TaskFlow, brought together these
+              skills in a full-stack project management application and
+              received a grade of 10/10. I enjoy solving problems,
+              learning new technologies and continuously improving
+              my development skills.
+            </p>
           </div>
 
-          <div className="col-lg-5">
-            <div className="about-side-card">
-              <div className="about-feature">
-                <div className="feature-icon"><FiBookOpen /></div>
-                <div>
-                  <h4>Education</h4>
-                  <p>Bachelor's in Computer Science and Engineering</p>
-                  <span>Specialization: Web Programming</span>
-                </div>
-              </div>
+          <div className="about-highlights">
+            {highlights.map((item) => (
+              <article className="about-highlight-card" key={item.title}>
+                <div className="about-highlight-icon">{item.icon}</div>
 
-              <div className="about-feature">
-                <div className="feature-icon"><FiCode /></div>
                 <div>
-                  <h4>Development</h4>
-                  <p>Frontend & Backend</p>
-                  <span>Building end-to-end web applications</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>
