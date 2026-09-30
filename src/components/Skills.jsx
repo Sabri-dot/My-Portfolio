@@ -1,62 +1,103 @@
+
 import {
-  FiMonitor,
-  FiServer,
-  FiDatabase,
-  FiTool,
-} from 'react-icons/fi';
+  FaCode,
+  FaServer,
+  FaDatabase,
+  FaTools,
+} from "react-icons/fa";
 
 const skillGroups = [
   {
-    icon: <FiMonitor />,
-    title: 'Frontend Development',
-    description: 'Creating responsive and interactive user interfaces.',
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap'],
+    icon: <FaCode />,
+    title: "Frontend Development",
+    description: "Building responsive and interactive user interfaces.",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Bootstrap",
+      "Tailwind CSS",
+    ],
   },
   {
-    icon: <FiServer />,
-    title: 'Backend Development',
-    description: 'Building application logic and server-side functionality.',
-    skills: ['REST APIs', 'Server-side Logic', 'Authentication'],
+    icon: <FaServer />,
+    title: "Backend Development",
+    description: "Developing server-side applications and APIs.",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "CRUD Operations",
+      "JWT Authentication",
+      "Role-Based Access Control",
+    ],
   },
   {
-    icon: <FiDatabase />,
-    title: 'Databases',
-    description: 'Working with relational and NoSQL data storage.',
-    skills: ['MySQL', 'Microsoft SQL Server', 'MongoDB'],
+    icon: <FaDatabase />,
+    title: "Databases",
+    description: "Working with relational and NoSQL databases.",
+    skills: [
+      "MySQL",
+      "Microsoft SQL Server",
+      "MongoDB",
+      "Database Design",
+    ],
   },
   {
-    icon: <FiTool />,
-    title: 'Tools & Workflow',
-    description: 'Managing code, collaboration and development workflow.',
-    skills: ['Git', 'GitHub', 'VS Code', 'npm', 'Vite'],
+    icon: <FaTools />,
+    title: "Tools & Workflow",
+    description: "Tools for development, collaboration and version control.",
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "npm",
+      "Vite",
+      "Agile Methodology",
+    ],
   },
 ];
 
 function Skills() {
   return (
-    <section id="skills" className="section-padding skills-section">
-      <div className="container">
-        <div className="section-heading">
-          <span className="section-kicker">MY TOOLKIT</span>
-          <h2>Skills & <span className="gradient-text">technologies.</span></h2>
-          <p>The technologies I use to bring web applications to life.</p>
+    <section className="skills-section section-padding" id="skills">
+      <div className="skills-container">
+        <div className="skills-heading">
+          <span className="section-label">MY EXPERTISE</span>
+
+          <h2 className="section-title">
+            Technical <span className="gradient-text">Skills</span>
+          </h2>
+
+          <p className="skills-description">
+            Technologies and tools I use to build web applications,
+            develop backend services and manage databases.
+          </p>
         </div>
 
-        <div className="row g-4">
-          {skillGroups.map((group, index) => (
-            <div className="col-md-6 col-lg-3" key={group.title}>
-              <div className="skill-card h-100">
-                <div className="skill-icon">{group.icon}</div>
-                <span className="skill-number">0{index + 1}</span>
-                <h3>{group.title}</h3>
-                <p>{group.description}</p>
-                <div className="skill-tags">
-                  {group.skills.map((skill) => (
-                    <span key={skill}>{skill}</span>
-                  ))}
+        <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <article className="skill-group-card" key={group.title}>
+              <div className="skill-group-header">
+                <div className="skill-group-icon">
+                  {group.icon}
+                </div>
+
+                <div>
+                  <h3>{group.title}</h3>
+                  <p>{group.description}</p>
                 </div>
               </div>
-            </div>
+
+              <div className="skill-tags">
+                {group.skills.map((skill) => (
+                  <span className="skill-tag" key={skill}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
       </div>
