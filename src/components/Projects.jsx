@@ -1,6 +1,7 @@
 import { FiArrowUpRight, FiCode } from 'react-icons/fi';
 
 
+
 const projects = [
   {
     number: "01",
@@ -19,6 +20,8 @@ const projects = [
       "Bootstrap",
     ],
     highlight: "Awarded the highest grade: 10/10",
+    github: "https://github.com/Sabri-dot/Task-Flow",
+    demo: "",
     className: "taskflow-project",
   },
   {
@@ -37,6 +40,8 @@ const projects = [
       "Git",
       "GitHub",
     ],
+    github: "https://github.com/Sabri-dot/online-bookstore",
+    demo: "",
     className: "bookstore-project",
   },
   {
@@ -54,6 +59,8 @@ const projects = [
       "Bootstrap",
       "Git",
     ],
+    github: "",
+    demo: "https://dagmara-januzi-makeup-artist.netlify.app/",
     className: "makeup-project",
   },
 ];
@@ -83,8 +90,13 @@ function Projects() {
               key={project.number}
             >
               <div className="project-card-top">
-                <span className="project-number">{project.number}</span>
-                <span className="project-category">{project.category}</span>
+                <span className="project-number">
+                  {project.number}
+                </span>
+
+                <span className="project-category">
+                  {project.category}
+                </span>
               </div>
 
               <div className="project-card-content">
@@ -104,10 +116,39 @@ function Projects() {
 
               <div className="project-technologies">
                 {project.technologies.map((technology) => (
-                  <span className="project-tech-tag" key={technology}>
+                  <span
+                    className="project-tech-tag"
+                    key={technology}
+                  >
                     {technology}
                   </span>
                 ))}
+              </div>
+
+              <div className="project-actions">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    className="project-link project-github-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>GitHub Repository</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    className="project-link project-demo-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Live Demo</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             </article>
           ))}
